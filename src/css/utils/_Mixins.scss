@@ -26,3 +26,8 @@
   justify-self: center;
   align-items: center;
 }
+@mixin flex-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

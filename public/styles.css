@@ -324,18 +324,35 @@ ul {
   background: white;
   height: 400px;
 }
+@media (max-width: 37.5rem) {
+  #deals {
+    height: 750px;
+    max-height: 800px;
+  }
+}
 #deals .deals {
   padding: 2rem 6rem;
   margin: 0 auto;
   text-align: center;
   color: #989393;
 }
-#deals .deals #spinner {
-  animation: rotate 1.5s linear infinite;
+@media (max-width: 37.5rem) {
+  #deals .deals {
+    padding: 2rem 1rem;
+  }
+}
+#deals .deals .spinner {
+  animation: infinite 22s rotate linear;
+  font-size: 32px;
+  padding: 1rem 0;
 }
 #deals .deals h3 {
   color: #212121;
   text-transform: uppercase;
+  padding: 1rem 0;
+}
+#deals .deals h3 span {
+  font-weight: 900;
 }
 
 @keyframes rotate {
@@ -345,6 +362,28 @@ ul {
   100% {
     transform: rotate(360deg);
   }
+}
+#exclusive {
+  background-color: red;
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#exclusive .video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#exclusive .exclusive {
+  text-align: center;
+  z-index: 100;
+  font-weight: bolder;
 }
 
 /*# sourceMappingURL=styles.css.map */
