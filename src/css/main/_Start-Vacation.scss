@@ -1,0 +1,48 @@
+@import "../utils/Variables";
+@import "../utils/Mixins";
+#start-vacation{
+  background: $danger;
+  height: 400px;
+  position: relative;
+  .start-vacation{
+    padding: 2rem 6rem;
+    margin: 0 auto;
+    text-align: center;
+    color: $light-color;
+    @media (max-width: $sm) {
+      padding: 2rem 1rem;
+    }
+    h3 {
+      text-transform: uppercase;
+    }
+
+    #globe{
+      font-size: 32px;
+      padding:  1rem 0;
+      left: 50%;
+    }
+  }
+  .btn-custom {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    background-color: $dark-color;
+    color: $light-color;
+    padding: .7rem 1.4rem;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: $base-font;
+    &:hover {
+      background-color: $danger;
+      transition: $transitions;
+    }
+    span {
+      font-weight: 900;
+    }
+    @media (max-width: $sm) {
+      left: 25%;
+    }
+
+  }
+}

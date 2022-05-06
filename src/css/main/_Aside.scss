@@ -1,0 +1,116 @@
+@import "../utils/Variables";
+@import "../utils/Mixins";
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  z-index: -1;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: $transitions;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-overlay.show {
+  opacity: 1;
+  z-index: 100;
+}
+
+.sidebar {
+  width: 90vw;
+  height: 95vh;
+  max-width: $fixed-width;
+  background: $light-color;
+  border-radius: $radius;
+  -webkit-box-shadow: $box-light;
+  box-shadow: $box-light;
+  position: relative;
+  padding: 4rem;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+
+  .sidebar-links {
+   padding: 0;
+    .sidebar-li{
+      text-transform: uppercase;
+      a {
+        font-size: $base-font;
+      }
+    }
+  }
+}
+.show .sidebar {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.sidebar-close {
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  //color: $secondary-color;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  animation: infinite 48s close-btn alternate;
+}
+@keyframes close-btn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sidebar-li {
+  padding: 1rem 1rem 1rem 0;
+  a {
+    //color: $secondary-color;
+    //font-size: $font-size-bg;
+  }
+}
+
+.sidebar-link {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 1rem 1rem 1rem 0.1rem;
+  //color: $secondary-color;
+  font-weight: 400;
+}
+.icon-link {
+  padding: 1rem 0;
+  //.icon-sidebar {
+  //  padding: 0 1rem 0 0;
+  //}
+}
+
+@media screen and (min-width: 800px) {
+  .sidebar-overlay {
+    display: none;
+  }
+}
+
+.loading {
+  @include display_flex;
+  position: relative;
+  height: 3rem;
+  margin: 7rem;
+  padding-top: 1rem;
+  transition: 2s ease-out;
+}
+
+.hide-loading {
+  display: none;
+}

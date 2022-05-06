@@ -1,0 +1,350 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.navbar {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1170px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin: 0 auto;
+}
+@media (max-width: 37.5rem) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+}
+.navbar .toggle-nav {
+  display: none;
+}
+@media (max-width: 37.5rem) {
+  .navbar .toggle-nav {
+    display: block;
+    padding: 0.5rem;
+    margin: 1rem 1rem 1rem 0.1rem;
+    border-radius: 5px;
+    background: #ffffff;
+    outline: none;
+    border: none;
+    width: 3rem;
+    height: 2rem;
+  }
+  .navbar .toggle-nav:hover {
+    background: #e8e7e7;
+    transition: all 0.3s ease;
+  }
+}
+.navbar .nav-right {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.navbar .nav-right .logo {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.navbar .nav-right .ul-links {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  margin: 0;
+}
+@media (max-width: 37.5rem) {
+  .navbar .nav-right .ul-links {
+    display: none;
+  }
+}
+.navbar .nav-right .ul-links .links {
+  padding: 0.1rem 1.2rem;
+}
+.navbar .nav-right .ul-links .links a {
+  padding: 0 0.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #212121;
+  display: flex;
+  align-items: center;
+}
+.navbar .nav-right .ul-links .links a:hover {
+  color: red;
+  transition: all 0.3s ease;
+}
+.navbar .nav-right .ul-links #link {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  position: relative;
+}
+.navbar .nav-right .ul-links #link #intern {
+  color: #212121;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 0 0.2rem 0.1rem 0.2rem;
+}
+.navbar .nav-right .ul-links #link #intern:hover {
+  color: red;
+  transition: all 0.3s ease;
+}
+
+.hidden-links {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.show-links {
+  display: block;
+  max-height: 250px;
+  background: #e8e7e7;
+  width: 150px;
+  animation: anim-bottom 0.6s ease;
+  padding: 0;
+  z-index: 10;
+}
+.show-links li {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+@keyframes anim-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  z-index: -1;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: all 0.3s ease;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-overlay.show {
+  opacity: 1;
+  z-index: 100;
+}
+
+.sidebar {
+  width: 90vw;
+  height: 95vh;
+  max-width: 620px;
+  background: #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 4rem;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+.sidebar .sidebar-links {
+  padding: 0;
+}
+.sidebar .sidebar-links .sidebar-li {
+  text-transform: uppercase;
+}
+.sidebar .sidebar-links .sidebar-li a {
+  font-size: 1rem;
+}
+
+.show .sidebar {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.sidebar-close {
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  animation: infinite 48s close-btn alternate;
+}
+
+@keyframes close-btn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.sidebar-li {
+  padding: 1rem 1rem 1rem 0;
+}
+.sidebar-link {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 1rem 1rem 1rem 0.1rem;
+  font-weight: 400;
+}
+
+.icon-link {
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 800px) {
+  .sidebar-overlay {
+    display: none;
+  }
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  height: 3rem;
+  margin: 7rem;
+  padding-top: 1rem;
+  transition: 2s ease-out;
+}
+
+.hide-loading {
+  display: none;
+}
+
+.carousel {
+  height: 400px;
+  width: 100%;
+  background: lightblue;
+}
+
+#start-vacation {
+  background: red;
+  height: 400px;
+  position: relative;
+}
+#start-vacation .start-vacation {
+  padding: 2rem 6rem;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+}
+@media (max-width: 37.5rem) {
+  #start-vacation .start-vacation {
+    padding: 2rem 1rem;
+  }
+}
+#start-vacation .start-vacation h3 {
+  text-transform: uppercase;
+}
+#start-vacation .start-vacation #globe {
+  font-size: 32px;
+  padding: 1rem 0;
+  left: 50%;
+}
+#start-vacation .btn-custom {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  background-color: #212121;
+  color: #ffffff;
+  padding: 0.7rem 1.4rem;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+#start-vacation .btn-custom:hover {
+  background-color: red;
+  transition: all 0.3s ease;
+}
+#start-vacation .btn-custom span {
+  font-weight: 900;
+}
+@media (max-width: 37.5rem) {
+  #start-vacation .btn-custom {
+    left: 25%;
+  }
+}
+
+#deals {
+  background: white;
+  height: 400px;
+}
+#deals .deals {
+  padding: 2rem 6rem;
+  margin: 0 auto;
+  text-align: center;
+  color: #989393;
+}
+#deals .deals #spinner {
+  animation: rotate 1.5s linear infinite;
+}
+#deals .deals h3 {
+  color: #212121;
+  text-transform: uppercase;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,135 @@
+@import "../utils/Variables";
+@import "../utils/Mixins";
+
+.navbar {
+  background: $light-color;
+  //position: fixed;
+  //top: 0;
+  //display: flex;
+  width: 100%;
+  max-width: $max-width;
+  //justify-content: space-between;
+  //align-content: center;
+  z-index: 2;
+  @include flex-sa;
+  margin: 0 auto;
+  @media (max-width: $sm) {
+    @include flex-sb;
+  }
+
+
+  .toggle-nav {
+    display: none;
+    @media (max-width: $sm) {
+      display: block;
+      padding: .5rem;
+      margin: 1rem 1rem 1rem .1rem;
+      border-radius: $radius;
+      background: $light-color; //temp
+      outline: none;
+      border: none;
+      width: 3rem;
+      height: 2rem;
+      &:hover {
+        background: $silver;
+        transition: $transitions;
+      }
+    }
+  }
+
+  .nav-right {
+    @include display_flex;
+
+    .logo {
+      font-size: $font-xl;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .ul-links {
+      @include flex-self;
+      margin: 0;
+      @media (max-width: $sm) {
+        display: none;
+      }
+
+      .links {
+        padding: .1rem 1.2rem;
+
+        a {
+          padding: 0 .2rem;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $dark-color;
+          display: flex;
+          align-items: center;
+          &:hover {
+            color: $danger;
+            transition: $transitions;
+          }
+        }
+
+      }
+
+      #link {
+        @include flex-self;
+        position: relative;
+
+        #intern {
+          color: $dark-color;
+          cursor: pointer;
+          font-size: 11px;
+          padding: 0 .2rem .1rem .2rem;
+          &:hover {
+            color: $danger;
+            transition: $transitions;
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+.hidden-links {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  display: none;
+  //height: auto;
+  //max-height: 0;
+  //overflow-y: hidden;
+  transition: $transitions;
+}
+
+.show-links {
+  display: block;
+  max-height: 250px;
+  background: $silver;
+  width: 150px;
+  animation: anim-bottom .6s ease;
+  padding: 0;
+  z-index: 10;
+  li {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    margin: 0 1rem;
+  }
+}
+
+@keyframes anim-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}

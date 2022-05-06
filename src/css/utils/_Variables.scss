@@ -1,0 +1,40 @@
+$light-color: #ffffff;
+$silver: #e8e7e7;
+$dark-color: #212121;
+$danger: #FF0000FF;
+$gray: #989393;
+
+//utils
+$transitions: all .3s ease;
+$line-height: 25px;
+$letter-spacing: 1.1px;
+
+$max-width: 1170px;
+$fixed-width: 620px;
+
+// spacing
+$base-padding: 1rem;
+$base-margin: 1rem;
+
+// borders
+$radius:5px;
+
+// box-shadow
+$box-light: 1px 3px 5px rgba(0,0,0,0.1) !default;
+$box-dark: 2px 4px 10px rgba(0,0,0,0.3) !default;
+
+// font sizes
+$base-font: 1rem !default;
+$font-sm: .8rem;
+$font-lg: 1.3rem;
+$font-xl: 1.5rem;
+$font-xxl: 2rem;
+$letter-spacing: 1.1px;
+
+$xs: 21.875rem; //350px
+$sm: 37.5rem; //600px
+$tablet: 48rem; //768px
+$tablet-md: 62rem; //992px
+$tablet-bg: 64rem; //1024px
+$desktop: 85.375rem; //1366px
+$lg-desktop: 120rem; //1920px
