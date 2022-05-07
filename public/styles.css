@@ -103,7 +103,7 @@ ul {
   align-items: center;
 }
 .navbar .nav-right .ul-links .links a:hover {
-  color: red;
+  color: #ED1C24;
   transition: all 0.3s ease;
 }
 .navbar .nav-right .ul-links #link {
@@ -119,7 +119,7 @@ ul {
   padding: 0 0.2rem 0.1rem 0.2rem;
 }
 .navbar .nav-right .ul-links #link #intern:hover {
-  color: red;
+  color: #ED1C24;
   transition: all 0.3s ease;
 }
 
@@ -272,9 +272,51 @@ ul {
 }
 
 #start-vacation {
-  background: red;
+  background: #ED1C24;
   height: 400px;
   position: relative;
+}
+@media (max-width: 37.5rem) {
+  #start-vacation {
+    height: 470px;
+  }
+}
+#start-vacation img {
+  position: absolute;
+  bottom: -57px;
+}
+@media (max-width: 120rem) {
+  #start-vacation img {
+    left: 33%;
+  }
+}
+@media (max-width: 1440px) {
+  #start-vacation img {
+    left: 28%;
+  }
+}
+@media (max-width: 85.375rem) {
+  #start-vacation img {
+    left: 25%;
+  }
+}
+@media (max-width: 64rem) {
+  #start-vacation img {
+    left: 20%;
+  }
+}
+@media (max-width: 48rem) {
+  #start-vacation img {
+    left: 10%;
+  }
+}
+@media (max-width: 37.5rem) {
+  #start-vacation img {
+    width: 100%;
+    bottom: -50px;
+    left: 0;
+    height: 40%;
+  }
 }
 #start-vacation .start-vacation {
   padding: 2rem 6rem;
@@ -298,7 +340,6 @@ ul {
 #start-vacation .btn-custom {
   position: absolute;
   bottom: 0;
-  left: 45%;
   background-color: #212121;
   color: #ffffff;
   padding: 0.7rem 1.4rem;
@@ -308,15 +349,45 @@ ul {
   font-size: 1rem;
 }
 #start-vacation .btn-custom:hover {
-  background-color: red;
+  background-color: #ED1C24;
   transition: all 0.3s ease;
 }
 #start-vacation .btn-custom span {
   font-weight: 900;
 }
+@media (max-width: 120rem) {
+  #start-vacation .btn-custom {
+    left: 46%;
+  }
+}
+@media (max-width: 85.375rem) {
+  #start-vacation .btn-custom {
+    left: 44%;
+  }
+}
+@media (max-width: 62rem) {
+  #start-vacation .btn-custom {
+    left: 42%;
+  }
+}
+@media (max-width: 48rem) {
+  #start-vacation .btn-custom {
+    left: 40%;
+  }
+}
 @media (max-width: 37.5rem) {
   #start-vacation .btn-custom {
     left: 25%;
+  }
+}
+@media (max-width: 425px) {
+  #start-vacation .btn-custom {
+    left: 28%;
+  }
+}
+@media (max-width: 320px) {
+  #start-vacation .btn-custom {
+    left: 22%;
   }
 }
 
@@ -384,6 +455,107 @@ ul {
   text-align: center;
   z-index: 100;
   font-weight: bolder;
+  color: #ffffff;
+}
+#exclusive .exclusive h1 {
+  padding: 0.2rem 0 0.1rem 0;
+}
+#exclusive .exclusive p {
+  padding: 1rem;
+  margin: 0;
+}
+#exclusive .exclusive .btn-icon {
+  background: rgba(0, 0, 0, 0.1);
+  outline: none;
+  border: none;
+  color: #ffffff;
+  padding: 1rem 0;
+}
+#exclusive .exclusive .btn-icon i {
+  font-size: 62px;
+}
+#exclusive .exclusive h3 {
+  text-transform: uppercase;
+}
+#exclusive .exclusive h3 span {
+  font-weight: 900;
+}
+
+#exclusive::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+#articles header {
+  margin: 1rem auto 2rem auto;
+  text-align: center;
+}
+#articles header i {
+  font-size: 24px;
+}
+#articles header h2 {
+  padding: 1rem;
+}
+#articles .new-articles {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-bottom: 1px solid #ccc;
+  margin: 1rem 0;
+}
+
+article {
+  position: relative;
+}
+article .btn-wrapper {
+  padding: 2rem 0 4rem 0;
+  margin: 0 0 4rem 0;
+}
+article .btn-wrapper .btn-articles {
+  position: absolute;
+  left: 45%;
+  width: 300px;
+  bottom: 0;
+  background-color: #212121;
+  color: #ffffff;
+  padding: 0.7rem 3.4rem;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+article .btn-wrapper .btn-articles span {
+  font-weight: 900;
+}
+article .btn-wrapper .btn-articles:hover {
+  background-color: #ED1C24;
+  transition: all 0.3s ease;
+}
+
+#alerts {
+  position: relative;
+  background-image: url("../assets/layer_15.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  z-index: 1;
+  height: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+#alerts article header {
+  z-index: 10;
+  text-align: center;
+}
+#alerts img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

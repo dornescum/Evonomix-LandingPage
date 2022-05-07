@@ -4,6 +4,40 @@
   background: $danger;
   height: 400px;
   position: relative;
+  @media (max-width: $sm) {
+    height: 470px;
+  }
+
+  img{
+    position: absolute;
+    bottom: -57px;
+    //left: 26%;
+    @media (max-width: $lg-desktop) {
+      left: 33%;
+    }
+    @media (max-width: 1440px) {
+      left: 28%;
+    }
+    @media (max-width: $desktop) {
+      left: 25%;
+    }
+    @media (max-width: $tablet-bg) {
+      left: 20%;
+    }
+    @media (max-width: $tablet) {
+      left: 10%;
+    }
+    @media (max-width: $sm) {
+      width: 100%;
+      bottom:-50px;
+      left: 0;
+      height: 40%;
+    }
+
+
+  }
+
+  //background-image: url("../assets/Shape.png");
   .start-vacation{
     padding: 2rem 6rem;
     margin: 0 auto;
@@ -25,7 +59,7 @@
   .btn-custom {
     position: absolute;
     bottom: 0;
-    left: 45%;
+    //left: 45%;
     background-color: $dark-color;
     color: $light-color;
     padding: .7rem 1.4rem;
@@ -40,9 +74,26 @@
     span {
       font-weight: 900;
     }
+    @media (max-width: $lg-desktop) {
+      left: 46%;
+    }
+    @media (max-width: $desktop) {
+      left: 44%;
+    }
+    @media (max-width: $tablet-md) {
+      left: 42%;
+    }
+    @media (max-width: $tablet) {
+      left: 40%;
+    }
     @media (max-width: $sm) {
       left: 25%;
     }
-
+    @media (max-width: 425px) {
+      left: 28%;
+    }
+    @media (max-width: 320px) {
+      left: 22%;
+    }
   }
 }

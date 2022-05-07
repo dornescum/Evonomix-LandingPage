@@ -1,0 +1,60 @@
+@import "../utils/Variables";
+@import "../utils/Mixins";
+
+#articles {
+  header {
+    margin: 1rem auto 2rem auto;
+    text-align: center;
+
+    i {
+      font-size: 24px;
+    }
+
+    h2 {
+      padding: 1rem;
+    }
+  }
+
+  .new-articles {
+    @include display_flex;
+    border-bottom: 1px solid #ccc;
+    margin: 1rem 0;
+  }
+}
+
+.btn-articles {
+  //position: absolute;
+  //bottom: 0;
+
+}
+
+article {
+  position: relative;
+
+  .btn-wrapper{
+   padding: 2rem 0 4rem 0;
+    margin: 0 0 4rem 0;
+    .btn-articles {
+      position: absolute;
+      //margin-left: -50px;
+      left: 45%;
+      width: 300px;
+      bottom: 0;
+      background-color: $dark-color;
+      color: $light-color;
+      padding: .7rem 3.4rem;
+      outline: none;
+      border: none;
+      text-transform: uppercase;
+      font-size: $base-font;
+      span {
+        font-weight: 900;
+      }
+      &:hover {
+        background-color: $danger;
+        transition: $transitions;
+      }
+    }
+
+  }
+}
