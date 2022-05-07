@@ -19,13 +19,11 @@
     @include display_flex;
     border-bottom: 1px solid #ccc;
     margin: 1rem 0;
+    h6 {
+      font-size: $font-xl;
+      text-transform: uppercase;
+    }
   }
-}
-
-.btn-articles {
-  //position: absolute;
-  //bottom: 0;
-
 }
 
 article {
@@ -36,7 +34,6 @@ article {
     margin: 0 0 4rem 0;
     .btn-articles {
       position: absolute;
-      //margin-left: -50px;
       left: 45%;
       width: 300px;
       bottom: 0;
@@ -53,6 +50,29 @@ article {
       &:hover {
         background-color: $danger;
         transition: $transitions;
+      }
+
+
+      @media (max-width: $lg-desktop) {
+        left: 44%;
+      }
+      @media (max-width: $desktop) {
+        left: 38%;
+      }
+      @media (max-width: $tablet-md) {
+        left: 33%;
+      }
+      @media (max-width: $tablet) {
+        left: 30%;
+      }
+      @media (max-width: $sm) {
+        left: 15%;
+      }
+      @media (max-width: 425px) {
+        left: 16%;
+      }
+      @media (max-width: 320px) {
+        left: 4%;
       }
     }
 
