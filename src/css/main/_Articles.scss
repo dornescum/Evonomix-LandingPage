@@ -19,9 +19,25 @@
     @include display_flex;
     border-bottom: 1px solid #ccc;
     margin: 1rem 0;
+    @media (max-width: 320px) {
+      flex-direction: column;
+      padding: 0 0 2rem 2rem;
+    }
     h6 {
       font-size: $font-xl;
       text-transform: uppercase;
+    }
+    p {
+      line-height: 1.2;
+      color: $gray;
+    }
+    a {
+      text-decoration: underline;
+      color: $danger;
+      span {
+        font-size: 9px;
+        padding-left: 2px;
+      }
     }
   }
 }

@@ -16,42 +16,67 @@
   color: $light-color;
   //filter: blur(4px);
   background: rgba(20, 22, 24, 0.12);
-  article{
+  @media (max-width: 320px) {
+    height: 800px;
+  }
+
+  article {
     z-index: 100;
 
-    header{
+    header {
       //position: absolute;
       z-index: 100;
       text-align: center;
       padding: 2rem;
+
       i {
         padding: 1rem;
         font-size: 36px;
       }
-      h2{
+
+      h2 {
         text-transform: uppercase;
+
         span {
           font-weight: 900;
         }
       }
     }
+
     form {
       margin: 0 auto;
       max-width: 1170px;
+      @media (max-width: $sm) {
+        margin: 0 2rem;
+      }
     }
   }
 
-  img{
+  img {
     width: 100%;
     height: 483px;
     filter: blur(8px) brightness(90%) contrast(200%);
     position: absolute;
+    @media (max-width: 320px) {
+      height: 800px;
+    }
   }
-  .bg-red{
+
+  .bg-red {
     background-color: $danger;
+
     &:hover {
       background-color: $dark-color;
       transition: $transitions;
     }
   }
+}
+.alertInfo{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: $light-color;
+  font-size: $font-xxl;
+  padding: 1rem 2rem;
+  background-color:$danger;
 }

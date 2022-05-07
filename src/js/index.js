@@ -8,6 +8,9 @@ const carousel = document.getElementById('carousel');
 const videoContainer = document.querySelector('.video');
 const videoBtn = document.querySelector('.btn-icon');
 
+const form = document.getElementById('form');
+
+
 // nav
 toggleNav.addEventListener('click', () => {
 	sidebarOverlay.classList.add('show');
@@ -33,3 +36,49 @@ videoBtn.addEventListener('click', () => {
 		videoContainer.pause();
 	}
 });
+// =====
+// form
+form.addEventListener('click', (e) => {
+	e.preventDefault();
+	const allData = [];
+	const formDestinations = document.getElementById("form").elements[0].value;
+	const formBudget = document.getElementById("form").elements[1].value;
+	const formName = document.getElementById("form").elements[2].value;
+	const formEmail = document.getElementById("form").elements[3].value;
+	const outputInfo = document.getElementById('alertInfo');
+	allData.push(formDestinations, formBudget, formName, formEmail);
+	console.log(allData);
+	// if (allData.length === 0 || allData.length < 3) {
+	// 	return;
+	// } else {
+	// 	setTimeout(() => {
+	// 		outputInfo.classList.add('alertInfo');
+	// 		outputInfo.innerHTML = `<p>${allData[0]}, has this
+	// 		${formBudget} and wants to go to ${formDestinations}. You can reach him at this email ${allData[3]}</p>`;
+	// 	}, 10000);
+	// }
+
+});
+
+
+
+// $(document).ready(function(){
+// 	$(".owl-carousel").owlCarousel();
+// });
+
+// $('.owl-carousel').owlCarousel({
+// 	loop:true,
+// 	margin:10,
+// 	nav:true,
+// 	responsive:{
+// 		0:{
+// 			items:1
+// 		},
+// 		600:{
+// 			items:3
+// 		},
+// 		1000:{
+// 			items:5
+// 		}
+// 	}
+// })

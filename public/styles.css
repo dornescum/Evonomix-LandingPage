@@ -509,9 +509,27 @@ ul {
   border-bottom: 1px solid #ccc;
   margin: 1rem 0;
 }
+@media (max-width: 320px) {
+  #articles .new-articles {
+    flex-direction: column;
+    padding: 0 0 2rem 2rem;
+  }
+}
 #articles .new-articles h6 {
   font-size: 1.5rem;
   text-transform: uppercase;
+}
+#articles .new-articles p {
+  line-height: 1.2;
+  color: #989393;
+}
+#articles .new-articles a {
+  text-decoration: underline;
+  color: #ED1C24;
+}
+#articles .new-articles a span {
+  font-size: 9px;
+  padding-left: 2px;
 }
 
 article {
@@ -586,6 +604,11 @@ article .btn-wrapper .btn-articles:hover {
   color: #ffffff;
   background: rgba(20, 22, 24, 0.12);
 }
+@media (max-width: 320px) {
+  #alerts {
+    height: 800px;
+  }
+}
 #alerts article {
   z-index: 100;
 }
@@ -608,11 +631,21 @@ article .btn-wrapper .btn-articles:hover {
   margin: 0 auto;
   max-width: 1170px;
 }
+@media (max-width: 37.5rem) {
+  #alerts article form {
+    margin: 0 2rem;
+  }
+}
 #alerts img {
   width: 100%;
   height: 483px;
   filter: blur(8px) brightness(90%) contrast(200%);
   position: absolute;
+}
+@media (max-width: 320px) {
+  #alerts img {
+    height: 800px;
+  }
 }
 #alerts .bg-red {
   background-color: #ED1C24;
@@ -620,6 +653,16 @@ article .btn-wrapper .btn-articles:hover {
 #alerts .bg-red:hover {
   background-color: #212121;
   transition: all 0.3s ease;
+}
+
+.alertInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: #ED1C24;
 }
 
 /*# sourceMappingURL=styles.css.map */
