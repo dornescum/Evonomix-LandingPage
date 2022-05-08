@@ -1,4 +1,4 @@
-import {toggleNav, sidebarOverlay, closeBtn} from "./nav.js";
+import {toggleNav, sidebarOverlay, closeBtn, slides} from "./nav.js";
 
 
 const linkMenu = document.getElementById('link');
@@ -7,15 +7,11 @@ let lastEl = linkMenu.lastElementChild;
 const carousel = document.getElementById('carousel');
 const videoContainer = document.querySelector('.video');
 const videoBtn = document.querySelector('.btn-icon');
-// const icon = videoBtn.firstElementChild;
 
 const form = document.getElementById('form');
 
-const second = document.getElementById('second');
-const articleTest = document.getElementById('articleTest');
 const imgCarousel = document.getElementById('carousel-image');
 const articolCarousel = document.getElementById('carousel-article');
-console.log(articolCarousel);
 
 
 
@@ -69,69 +65,23 @@ form.addEventListener('click', (e) => {
 
 });
 
+//
 
-const slides = [
-	{
-		title: "Oferta saptamanii 1",
-		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, nostrum!",
-		"background": {
-			"backgroundImage": "../../assets/img1.webp",
-			"backgroundColor": "#fff"
-		}
-	},
-	{
-		title: "Oferta saptamanii 2",
-		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, nostrum!",
-		"background": {
-			"backgroundImage": "../../assets/img2.webp",
-			"backgroundColor": "#fff"
-		}
-	},
-	{
-		title: "Oferta saptamanii 3",
-		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, nostrum!",
-		"background": {
-			"backgroundImage": "../../assets/img3.webp",
-			"backgroundColor": "#fff"
-		}
-	}
-
-];
-
-
-// second.innerHTML = slides.map(item=>{
-// 	return `        <div class="owl-carousel owl-theme">
-//            				 <div class="item">
-//                 				<img src=${item.background.backgroundImage}
-//                    				  alt=${item.title}>
-//           			 	 </div>
-//         </div>
-//     `
-// });
 imgCarousel.innerHTML = slides.map(item=>{
 	return `        
            				 <div class="item">
                 				<img src=${item.background.backgroundImage}
                    				  alt=${item.title}>
-          			 	 </div>
-      
-    `
-});
-articolCarousel.innerHTML = slides.map(item=>{
-	const {title, description} =item;
-	console.log(item);
-	return `                            <h1>${title}</h1>
-                    <p>${description}</p>
-                    <button class="btn-carousel">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <span>Detalii</span></button>
-    `
-});
-
-
-
-
-
+                   				  <article>
+                   				  	   <h1>${item.title}</h1>
+                   				   <p>${item.description}</p>
+                   				     <button class="btn-carousel">
+                    				 	<i class="fa fa-star" aria-hidden="true"></i>
+                         				<span>Detalii</span>
+                         			</button>
+								</article>
+                   		</div>`
+}).join('');
 
 
 $('.owl-carousel').owlCarousel({
