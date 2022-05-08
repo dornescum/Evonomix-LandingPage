@@ -145,6 +145,7 @@ ul {
   border-bottom: 1px solid #ccc;
   cursor: pointer;
   margin: 0 1rem;
+  z-index: 10;
 }
 
 @keyframes anim-bottom {
@@ -173,12 +174,12 @@ ul {
   -o-transition: var(--transition);
   transition: all 0.3s ease;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .sidebar-overlay.show {
   opacity: 1;
-  z-index: 100;
+  z-index: 102;
 }
 
 .sidebar {
@@ -272,11 +273,232 @@ ul {
   position: relative;
 }
 .carousel article {
-  z-index: 100;
+  z-index: 1;
   position: absolute;
-  top: 20%;
+}
+.carousel article h1 {
+  padding: 0.5rem;
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.7;
+  display: inline-block;
+}
+.carousel article p {
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.7;
+  padding: 0.5rem;
+}
+.carousel article .btn-carousel {
+  width: 250px;
+  background-color: #ED1C24;
+  color: #ffffff;
+  padding: 0.7rem 3.4rem;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.carousel article .btn-carousel span {
+  font-weight: 900;
+}
+.carousel article .btn-carousel:hover {
+  background-color: #ED1C24;
+  transition: all 0.3s ease;
+}
+@media (max-width: 120rem) {
+  .carousel article {
+    top: 20%;
+    left: 22%;
+  }
+}
+@media (max-width: 85.375rem) {
+  .carousel article {
+    top: 38%;
+    left: 10%;
+  }
+}
+@media (max-width: 64rem) {
+  .carousel article {
+    top: 33%;
+    left: 10%;
+  }
+}
+@media (max-width: 48rem) {
+  .carousel article {
+    top: 30%;
+    left: 10%;
+  }
+}
+@media (max-width: 37.5rem) {
+  .carousel article {
+    top: 15%;
+  }
+}
+@media (max-width: 425px) {
+  .carousel article {
+    top: 16%;
+    left: 4%;
+  }
+  .carousel article h1 {
+    font-size: 1.3rem;
+  }
+  .carousel article p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 320px) {
+  .carousel article {
+    top: 24%;
+    left: 4%;
+  }
+  .carousel article h1 {
+    font-size: 1.3rem;
+  }
+  .carousel article p {
+    font-size: 1rem;
+  }
+}
+
+.social {
+  position: absolute;
+  top: 6%;
+  right: 20%;
+  z-index: 10;
+}
+.social button {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.7;
+  outline: none;
+  border: none;
+}
+.social button:hover {
+  background-color: #ED1C24;
+  transition: all 0.3s ease;
+}
+.social button i {
+  font-size: 16px;
+}
+.social button i:hover {
+  background-color: #ED1C24;
+  transition: all 0.3s ease;
+}
+
+.owl-carousel {
+  width: 100%;
+  height: 400px;
+}
+
+.slide {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
   left: 0;
-  transform: translateX(85%);
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*.slide-1 {*/
+/*    background-image: url(bg-1.jpg);*/
+/*}*/
+/*.slide-2 {*/
+/*    background-image: url(bg-2.jpg);*/
+/*}*/
+/*.slide-3 {*/
+/*    background-image: url(bg-3.jpg);*/
+/*}*/
+.slide-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  padding: 0 20%;
+}
+
+.slide-content h1 {
+  font-family: "Anton", serif;
+  font-size: 45px;
+  text-transform: uppercase;
+}
+
+.slide-content p {
+  font-family: "Lato", serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.slide-content button {
+  font-family: "Roboto", serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  padding: 10px 25px;
+  border: none;
+}
+
+.owl-dots {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 1%;
+  display: none;
+}
+
+.owl-dots span {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.owl-dots button {
+  border: none !important;
+  outline: none !important;
+}
+
+.owl-nav {
+  position: absolute;
+  bottom: -20%;
+  left: 70%;
+}
+
+.owl-nav button {
+  border: none !important;
+  outline: none !important;
+}
+
+.owl-prev, .owl-next {
+  transform: translateY(-80%);
+  color: #fff !important;
+  font-size: 65px !important;
+  font-weight: bolder !important;
+  background: none !important;
+}
+
+.owl-prev {
+  left: -1% !important;
+}
+
+.owl-next {
+  right: 1%;
+}
+
+.item img {
+  height: 400px;
+  object-fit: cover;
 }
 
 #start-vacation {
