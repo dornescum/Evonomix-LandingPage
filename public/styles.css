@@ -269,6 +269,14 @@ ul {
   height: 400px;
   width: 100%;
   background: lightblue;
+  position: relative;
+}
+.carousel article {
+  z-index: 100;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  transform: translateX(85%);
 }
 
 #start-vacation {
