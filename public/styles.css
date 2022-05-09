@@ -276,7 +276,6 @@ ul {
 .carousel {
   height: 400px;
   width: 100%;
-  background: lightblue;
   position: relative;
 }
 .carousel article {
@@ -587,7 +586,7 @@ ul {
 }
 @media (max-width: 120rem) {
   #start-vacation .btn-custom {
-    left: 46%;
+    left: 45%;
   }
 }
 @media (max-width: 85.375rem) {
@@ -758,20 +757,18 @@ ul {
   color: #ED1C24;
 }
 #articles .new-articles a span {
-  font-size: 9px;
-  padding-left: 2px;
+  font-size: 12px;
 }
 
 article {
   position: relative;
 }
 article .btn-wrapper {
-  padding: 2rem 0 4rem 0;
+  padding: 2rem 0 1rem 0;
   margin: 0 0 4rem 0;
 }
 article .btn-wrapper .btn-articles {
   position: absolute;
-  left: 45%;
   width: 300px;
   bottom: 0;
   background-color: #212121;
@@ -791,7 +788,7 @@ article .btn-wrapper .btn-articles:hover {
 }
 @media (max-width: 120rem) {
   article .btn-wrapper .btn-articles {
-    left: 44%;
+    left: 42%;
   }
 }
 @media (max-width: 85.375rem) {
@@ -893,6 +890,10 @@ article .btn-wrapper .btn-articles:hover {
   font-size: 2rem;
   padding: 1rem 2rem;
   background-color: #ED1C24;
+}
+
+#alert-btn {
+  margin: 3rem 0 0 0;
 }
 
 footer .bottom-nav {

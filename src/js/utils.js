@@ -30,7 +30,7 @@ export const slides =[
 		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, nostrum!",
 		"background": {
 			"backgroundImage": "",
-			"backgroundColor": "#fff"
+			"backgroundColor": "#420f0f"
 		}
 	}
 ];

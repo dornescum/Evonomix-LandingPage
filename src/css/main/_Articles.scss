@@ -35,8 +35,8 @@
       text-decoration: underline;
       color: $danger;
       span {
-        font-size: 9px;
-        padding-left: 2px;
+        font-size: 12px;
+        //padding-left: 2px;
       }
     }
   }
@@ -46,11 +46,11 @@ article {
   position: relative;
 
   .btn-wrapper{
-   padding: 2rem 0 4rem 0;
+   padding: 2rem 0 1rem 0;
     margin: 0 0 4rem 0;
     .btn-articles {
       position: absolute;
-      left: 45%;
+      //left: 42%;
       width: 300px;
       bottom: 0;
       background-color: $dark-color;
@@ -70,7 +70,7 @@ article {
 
 
       @media (max-width: $lg-desktop) {
-        left: 44%;
+        left: 42%;
       }
       @media (max-width: $desktop) {
         left: 38%;

@@ -1,5 +1,4 @@
 import {slides} from "./utils.js";
-
 export const toggleNav = document.querySelector('.toggle-nav');
 export const sidebarOverlay = document.querySelector('.sidebar-overlay');
 export const closeBtn = document.querySelector('.sidebar-close');
@@ -9,12 +8,8 @@ let lastEl = linkMenu.lastElementChild;
 const carousel = document.getElementById('carousel');
 const videoContainer = document.querySelector('.video');
 const videoBtn = document.querySelector('.btn-icon');
-
 const form = document.getElementById('form');
-
 const imgCarousel = document.getElementById('carousel-image');
-
-
 
 
 // nav
@@ -46,32 +41,21 @@ videoBtn.addEventListener('click', () => {
 // form
 form.addEventListener('click', (e) => {
 	e.preventDefault();
-	const allData = [];
-	const formDestinations = document.getElementById("form").elements[0].value;
-	const formBudget = document.getElementById("form").elements[1].value;
-	const formName = document.getElementById("form").elements[2].value;
-	const formEmail = document.getElementById("form").elements[3].value;
-	const outputInfo = document.getElementById('alertInfo');
+	let allData = [];
+	let formDestinations = document.getElementById("form").elements[0].value;
+	let formBudget = document.getElementById("form").elements[1].value;
+	let formName = document.getElementById("form").elements[2].value;
+	let formEmail = document.getElementById("form").elements[3].value;
 	allData.push(formDestinations, formBudget, formName, formEmail);
 	console.log(allData);
-	// if (allData.length === 0 || allData.length < 3) {
-	// 	return;
-	// } else {
-	// 	setTimeout(() => {
-	// 		outputInfo.classList.add('alertInfo');
-	// 		outputInfo.innerHTML = `<p>${allData[0]}, has this
-	// 		${formBudget} and wants to go to ${formDestinations}. You can reach him at this email ${allData[3]}</p>`;
-	// 	}, 10000);
-	// }
-
+	form.reset();
 });
 
-//
 
 imgCarousel.innerHTML = slides.map(item=>{
-	const {background:{backgroundImage}, title, description} =item;
+	const {background:{backgroundImage, backgroundColor}, title, description} =item;
 	if (title ==="" || description === "" || backgroundImage === ""){
-		return `        	<div class="item">
+		return `        	<div class="item" style=${backgroundColor}>
                 				<img src='https://images.unsplash.com/photo-1623018035782-b269248df916?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZXJyb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'
                    				  alt=${title}>
                    				  <article>
