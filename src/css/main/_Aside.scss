@@ -93,16 +93,3 @@
     display: none;
   }
 }
-
-.loading {
-  @include display_flex;
-  position: relative;
-  height: 3rem;
-  margin: 7rem;
-  padding-top: 1rem;
-  transition: 2s ease-out;
-}
-
-.hide-loading {
-  display: none;
-}

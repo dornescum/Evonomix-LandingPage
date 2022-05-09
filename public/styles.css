@@ -7,10 +7,10 @@ body {
   box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
+/*code {*/
+/*    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',*/
+/*    monospace;*/
+/*}*/
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -258,21 +258,6 @@ ul {
     display: none;
   }
 }
-.loading {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  position: relative;
-  height: 3rem;
-  margin: 7rem;
-  padding-top: 1rem;
-  transition: 2s ease-out;
-}
-
-.hide-loading {
-  display: none;
-}
-
 .carousel {
   height: 400px;
   width: 100%;
@@ -411,15 +396,6 @@ ul {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/*.slide-1 {*/
-/*    background-image: url(bg-1.jpg);*/
-/*}*/
-/*.slide-2 {*/
-/*    background-image: url(bg-2.jpg);*/
-/*}*/
-/*.slide-3 {*/
-/*    background-image: url(bg-3.jpg);*/
-/*}*/
 .slide-content {
   text-align: center;
   position: absolute;
