@@ -1,5 +1,3 @@
-
-
 export const slides =[
 	{
 		title: "Oferta saptamanii 1",

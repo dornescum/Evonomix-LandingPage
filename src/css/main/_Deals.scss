@@ -2,7 +2,6 @@
 @import "../utils/Mixins";
 
 #deals {
-  //clip-path: polygon(52% 0, 65% 15%, 100% 16%, 100% 100%, 0 100%, 0 16%, 30% 16%, 41% 3%, 47% 6%);
   background: white;
   height: 400px;
   @media (max-width: $sm) {
@@ -18,7 +17,6 @@
     @media (max-width: $sm) {
       padding: 2rem 1rem;
     }
-
 
     .spinner{
       animation: infinite 22s rotate linear;
@@ -37,7 +35,7 @@
     }
   }
 }
-//todo add aninamtion sccs
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);

@@ -738,7 +738,7 @@ ul {
   border-bottom: 1px solid #ccc;
   margin: 1rem 0;
 }
-@media (max-width: 320px) {
+@media (max-width: 37.5rem) {
   #articles .new-articles {
     flex-direction: column;
     padding: 0 0 2rem 2rem;
@@ -816,6 +816,11 @@ article .btn-wrapper .btn-articles:hover {
     left: 16%;
   }
 }
+@media (max-width: 375px) {
+  article .btn-wrapper .btn-articles {
+    left: 12%;
+  }
+}
 @media (max-width: 320px) {
   article .btn-wrapper .btn-articles {
     left: 4%;
@@ -831,7 +836,7 @@ article .btn-wrapper .btn-articles:hover {
   color: #ffffff;
   background: rgba(20, 22, 24, 0.12);
 }
-@media (max-width: 320px) {
+@media (max-width: 37.5rem) {
   #alerts {
     height: 800px;
   }

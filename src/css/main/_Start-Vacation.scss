@@ -1,6 +1,7 @@
 @import "../utils/Variables";
 @import "../utils/Mixins";
-#start-vacation{
+
+#start-vacation {
   background: $danger;
   height: 400px;
   position: relative;
@@ -8,7 +9,7 @@
     height: 470px;
   }
 
-  img{
+  img {
     position: absolute;
     bottom: -57px;
     //left: 26%;
@@ -29,16 +30,13 @@
     }
     @media (max-width: $sm) {
       width: 100%;
-      bottom:-50px;
+      bottom: -50px;
       left: 0;
       height: 40%;
     }
-
-
   }
 
-  //background-image: url("../assets/Shape.png");
-  .start-vacation{
+  .start-vacation {
     padding: 2rem 6rem;
     margin: 0 auto;
     text-align: center;
@@ -46,20 +44,21 @@
     @media (max-width: $sm) {
       padding: 2rem 1rem;
     }
+
     h3 {
       text-transform: uppercase;
     }
 
-    #globe{
+    #globe {
       font-size: 32px;
-      padding:  1rem 0;
+      padding: 1rem 0;
       left: 50%;
     }
   }
+
   .btn-custom {
     position: absolute;
     bottom: 0;
-    //left: 45%;
     background-color: $dark-color;
     color: $light-color;
     padding: .7rem 1.4rem;
@@ -67,13 +66,16 @@
     border: none;
     text-transform: uppercase;
     font-size: $base-font;
+
     &:hover {
       background-color: $danger;
       transition: $transitions;
     }
+
     span {
       font-weight: 900;
     }
+
     @media (max-width: $lg-desktop) {
       left: 45%;
     }

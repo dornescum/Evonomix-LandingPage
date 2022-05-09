@@ -19,7 +19,7 @@
     @include display_flex;
     border-bottom: 1px solid #ccc;
     margin: 1rem 0;
-    @media (max-width: 320px) {
+    @media (max-width: $sm) {
       flex-direction: column;
       padding: 0 0 2rem 2rem;
     }
@@ -36,7 +36,6 @@
       color: $danger;
       span {
         font-size: 12px;
-        //padding-left: 2px;
       }
     }
   }
@@ -50,7 +49,6 @@ article {
     margin: 0 0 4rem 0;
     .btn-articles {
       position: absolute;
-      //left: 42%;
       width: 300px;
       bottom: 0;
       background-color: $dark-color;
@@ -86,6 +84,9 @@ article {
       }
       @media (max-width: 425px) {
         left: 16%;
+      }
+      @media (max-width: 375px) {
+        left: 12%;
       }
       @media (max-width: 320px) {
         left: 4%;

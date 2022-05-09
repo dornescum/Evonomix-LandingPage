@@ -10,11 +10,6 @@
   article {
     z-index: 1;
     position: absolute;
-    //top: 20%;
-    //left: 0;
-    //transform: translateX(85%);
-
-
 
     h1 {
       padding: .5rem;
@@ -29,14 +24,10 @@
       background-color: rgba(0, 0, 0, 1);
       opacity: .7;
       padding: .5rem;
-      //margin-bottom: 1rem;
     }
 
     .btn-carousel {
-      //position: absolute;
-      //left: 45%;
       width: 250px;
-      //bottom: 0;
       background-color: $danger;
       color: $light-color;
       padding: .7rem 3.4rem;
@@ -58,7 +49,6 @@
 
     @media (max-width: $lg-desktop) {
       top: 20%;
-      //transform: translateX(85%);
       left: 22%;
 
     }
@@ -123,9 +113,7 @@
       transition: $transitions;
     }
 
-    i {
-      //font-size: 16px;
-    }
+    i {}
   }
 
 }

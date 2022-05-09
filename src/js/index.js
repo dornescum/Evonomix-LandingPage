@@ -1,7 +1,8 @@
 import {slides} from "./utils.js";
-export const toggleNav = document.querySelector('.toggle-nav');
-export const sidebarOverlay = document.querySelector('.sidebar-overlay');
-export const closeBtn = document.querySelector('.sidebar-close');
+
+const toggleNav = document.querySelector('.toggle-nav');
+const sidebarOverlay = document.querySelector('.sidebar-overlay');
+const closeBtn = document.querySelector('.sidebar-close');
 const linkMenu = document.getElementById('link');
 const destinatiiInterne = document.getElementById('destinatii-interne');
 let lastEl = linkMenu.lastElementChild;
@@ -24,6 +25,7 @@ destinatiiInterne.addEventListener('click', () => {
 	lastEl.classList.toggle('show-links');
 });
 carousel.setAttribute('class', 'carousel');
+
 // video
 videoBtn.addEventListener('click', () => {
 	const icon = videoBtn.firstElementChild;
@@ -52,9 +54,9 @@ form.addEventListener('click', (e) => {
 });
 
 
-imgCarousel.innerHTML = slides.map(item=>{
-	const {background:{backgroundImage, backgroundColor}, title, description} =item;
-	if (title ==="" || description === "" || backgroundImage === ""){
+imgCarousel.innerHTML = slides.map(item => {
+	const {background: {backgroundImage, backgroundColor}, title, description} = item;
+	if (title === "" || description === "" || backgroundImage === "") {
 		return `        	<div class="item" style=${backgroundColor}>
                 				<img src='https://images.unsplash.com/photo-1623018035782-b269248df916?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZXJyb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'
                    				  alt=${title}>
@@ -67,7 +69,7 @@ imgCarousel.innerHTML = slides.map(item=>{
                          			</button>
 								</article>
                    		</div>
-`
+`;
 	}
 	return `        	<div class="item">
                 				<img src=${backgroundImage}
@@ -81,7 +83,7 @@ imgCarousel.innerHTML = slides.map(item=>{
                          			</button>
 								</article>
                    		</div>
-`
+`;
 }).join('');
 
 
