@@ -3,20 +3,14 @@
 
 .navbar {
   background: $light-color;
-  //position: fixed;
-  //top: 0;
-  //display: flex;
   width: 100%;
   max-width: $max-width;
-  //justify-content: space-between;
-  //align-content: center;
   z-index: 2;
   @include flex-sa;
   margin: 0 auto;
   @media (max-width: $sm) {
     @include flex-sb;
   }
-
 
   .toggle-nav {
     display: none;
@@ -68,7 +62,6 @@
             transition: $transitions;
           }
         }
-
       }
 
       #link {
@@ -85,9 +78,7 @@
             transition: $transitions;
           }
         }
-
       }
-
     }
   }
 }
@@ -97,9 +88,6 @@
   top: 30px;
   left: 25px;
   display: none;
-  //height: auto;
-  //max-height: 0;
-  //overflow-y: hidden;
   transition: $transitions;
 }
 
@@ -107,7 +95,7 @@
   display: block;
   max-height: 250px;
   background: $silver;
-  width: 150px;
+  width: 190px;
   animation: anim-bottom .6s ease;
   padding: 0;
   z-index: 10;
@@ -117,6 +105,13 @@
     cursor: pointer;
     margin: 0 1rem;
     z-index: 10;
+    :last-child{
+      border-bottom: none;
+    }
+    &:hover {
+      color: $danger;
+      transition: $transitions;
+    }
   }
 }
 

@@ -1,0 +1,52 @@
+@import "../utils/Variables";
+@import "../utils/Mixins";
+
+
+footer {
+  .bottom-nav{
+    background-color: $light-color;
+    @include flex-content;
+    margin: 0;
+    height: 3rem;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      height: auto;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+
+    li {
+      padding: 0 .7rem;
+      cursor: pointer;
+      @media (max-width: $tablet) {
+        padding: .2rem .7rem;
+      }
+
+      }
+  }
+
+  .logo{
+    background-color: $dark-color;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //fixme position
+    p {
+      max-width: 1170px;
+      width: 100%;
+      color: $light-color;
+      text-align: center;
+      padding-top:1rem;
+      span {
+        font-weight: 900;
+      }
+    }
+
+
+    i {
+      color: $danger;
+      padding: 0 .5rem;
+    }
+  }
+}

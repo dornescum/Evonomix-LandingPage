@@ -117,22 +117,19 @@
     opacity: .7;
     outline: none;
     border: none;
-
+    padding: 0;
     &:hover {
       background-color: $danger;
       transition: $transitions;
     }
 
     i {
-      font-size: 16px;
-
-      &:hover {
-        background-color: $danger;
-        transition: $transitions;
-      }
+      //font-size: 16px;
     }
   }
+
 }
+
 
 //====owl
 .owl-carousel {

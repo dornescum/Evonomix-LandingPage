@@ -1,6 +1,4 @@
-export const toggleNav = document.querySelector('.toggle-nav');
-export const sidebarOverlay = document.querySelector('.sidebar-overlay');
-export const closeBtn = document.querySelector('.sidebar-close');
+
 
 export const slides =[
 	{
@@ -24,6 +22,14 @@ export const slides =[
 		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, nostrum!",
 		"background": {
 			"backgroundImage": "../../assets/img3.webp",
+			"backgroundColor": "#fff"
+		}
+	},
+	{
+		title: "",
+		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, nostrum!",
+		"background": {
+			"backgroundImage": "",
 			"backgroundColor": "#fff"
 		}
 	}
