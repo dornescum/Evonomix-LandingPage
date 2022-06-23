@@ -5,13 +5,13 @@
 #alerts {
   position: relative;
   z-index: 1;
-  height: 483px;
+  //height: 483px;
   width: 100%;
   margin: 0 auto;
   color: $light-color;
   background: rgba(20, 22, 24, 0.12);
   @media (max-width: $sm) {
-    height: 800px;
+    //height: 800px;
   }
 
   article {
@@ -47,7 +47,8 @@
 
   img {
     width: 100%;
-    height: 483px;
+    //height: 483px;
+    height: 100%;
     filter: blur(8px) brightness(90%) contrast(200%);
     position: absolute;
     @media (max-width: 320px) {
@@ -64,15 +65,30 @@
     }
   }
 }
-.alertInfo{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: $light-color;
-  font-size: $font-xxl;
-  padding: 1rem 2rem;
-  background-color:$danger;
+
+#submitBtn {
+  margin: 1rem 0 1rem 0;
 }
-#alert-btn {
-  margin: 3rem 0 0 0;
+#clientInfo{
+  display: none;
+}
+.clientInfo{
+  display: block;
+}
+.inner-client {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $gray;
+  color: $dark-color;
+  margin: 1rem;
+  padding: 1rem;
+  span {
+    font-weight: 700;
+  }
+  .sarac{
+    font-weight: 900;
+    color: $danger;
+  }
 }

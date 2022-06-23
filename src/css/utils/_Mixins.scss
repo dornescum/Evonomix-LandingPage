@@ -1,3 +1,4 @@
+@import "Variables";
 @mixin display_flex{
   display: flex;
   justify-content: center;
@@ -30,4 +31,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+%btn-articles {
+  position: absolute;
+  width: 300px;
+  bottom: 0;
+  background-color: $dark-color;
+  color: $light-color;
+  padding: .7rem 3.4rem;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: $base-font;
+  span {
+    font-weight: 900;
+  }
+  &:hover {
+    background-color: $danger;
+    transition: $transitions;
+  }
+
+
+  @media (max-width: $lg-desktop) {
+    left: 42%;
+  }
+  @media (max-width: $desktop) {
+    left: 38%;
+  }
+  @media (max-width: $tablet-md) {
+    left: 33%;
+  }
+  @media (max-width: $tablet) {
+    left: 30%;
+  }
+  @media (max-width: $sm) {
+    left: 15%;
+  }
+  @media (max-width: 425px) {
+    left: 16%;
+  }
+  @media (max-width: 375px) {
+    left: 12%;
+  }
+  @media (max-width: 320px) {
+    left: 4%;
+  }
 }

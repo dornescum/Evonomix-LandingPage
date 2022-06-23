@@ -15,21 +15,28 @@ const videoContainer = $('.video');
 const videoBtn = $('.btn-icon');
 const form = $('form');
 const imgCarousel = document.getElementById('carousel-image');
-
-
 // nav
 toggleNav.on('click', () => sidebarOverlay.addClass('show'));
 closeBtn.on('click', () => sidebarOverlay.removeClass('show'));
 // =========
 
 destinatiiInterne.on('click', function () {
-	hiddenLinks.toggleClass('show-links');
-
+	// hiddenLinks.toggleClass('show-links');
+	// hiddenLinks.show();
+	// hiddenLinks.toggle('linear', complete).css('background', 'blue');
+	hiddenLinks.slideToggle(1000).addClass('show-links');
+	// hiddenLinks.slideToggle(1000).animate(
+	// 	{
+	// 		height:'250px',
+	// 		backgroundColor:"blue",
+	// 		fontSize: '48px'
+	// }, 1000);
 });
+function complete() {
+}
 carousel.attr('class', 'carousel');
 
 // video
-
 videoBtn.on('click', () => {
 	const icon = $('.btn-icon').children();
 	if (icon.hasClass("icon-play-circled")) {
@@ -44,24 +51,39 @@ videoBtn.on('click', () => {
 });
 
 // form
-form.on('click', (e) => {
+form.on('submit', (e) => {
 	e.preventDefault();
-	let allData = [];
-	let formDestinations = $("#destinations").val();
-	let formBudget = $("#budget").val();
-	let formName = $("#fullName").val();
-	let formEmail = $("#email").val();
-	allData.push(formDestinations, formBudget, formName, formEmail);
-	console.log(allData);
+	let formDestinations = $("#destinations");
+	let formBudget = $("#budget");
+	let firstName = $("#firstName");
+	let lastName = $("#lastName");
+	let formEmail = $("#email");
+	let formMessage = $("#textarea");
+	const clientInfo = $("#clientInfo");
+	console.log(formBudget.val());
 
-	const trip = `${formName} wants to go to ${formDestinations} and has ${formBudget} $`;
-	$('#alertInfo').text(trip).addClass('testing');
+	const showInfo =()=>{
+if (firstName.val().length <3 || lastName.val().length<=5){
+	return alert('First and last name are a must')
+}
+		clientInfo.removeAttr("id", "clientInfo")
+		clientInfo.html(`
+<div class="inner-client">
+<h1>${firstName.val()} ${lastName.val()}</h1>
+		<p> Wants to go to ${formDestinations.val()} and has
+		 a budget of 
+		 <span class=${formBudget.val() === "100$" || formBudget.val() === "500$" ? "sarac" : " "}>
+${formBudget.val() === "100$" || formBudget.val() === "500$" ? "De Sarac !" : formBudget.val() }</span> </p>
+		 <p>He left us this message : <span>${formMessage.val()}</span></p>
+		 <p>We may contact him at ${formEmail.val()}</p>
+</div>
+		`)
+		clientInfo.addClass('clientInfo')
+
+	}
+	showInfo();
 	const dataKey = $('.bg-red').data('key1', 1234);
 	// console.log(dataKey);
-	setTimeout(() => {
-		// $('#alertInfo').addClass('hidden');
-		$('#alertInfo').remove();
-	}, 10000);
 	form.trigger('reset')
 	// form.reset();
 });
