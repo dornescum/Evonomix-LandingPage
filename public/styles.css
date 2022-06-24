@@ -1292,7 +1292,7 @@ article .btn-wrapper .btn-articles:hover, article .btn-wrapper .btn-articles-red
   width: 100%;
   margin: 0 auto;
   color: #ffffff;
-  background: rgba(20, 22, 24, 0.12);
+  background: rgba(20, 22, 24, 0.72);
 }
 #alerts article {
   z-index: 100;
@@ -1368,6 +1368,28 @@ article .btn-wrapper .btn-articles:hover, article .btn-wrapper .btn-articles-red
 .inner-client .sarac {
   font-weight: 900;
   color: #ED1C24;
+}
+
+.invalid-feedback {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #dc3545;
+}
+
+.invalid {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #ED1C24;
+}
+
+.email-validate {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
 article .btn-wrapper .btn-articles, article .btn-wrapper .btn-articles-red {

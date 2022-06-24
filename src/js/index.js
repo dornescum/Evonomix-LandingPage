@@ -15,25 +15,18 @@ const videoContainer = $('.video');
 const videoBtn = $('.btn-icon');
 const form = $('form');
 const imgCarousel = document.getElementById('carousel-image');
+// form budget
+let formBudget = $("#budget");
+formBudget.prop("disabled", "disabled");
+
 // nav
 toggleNav.on('click', () => sidebarOverlay.addClass('show'));
 closeBtn.on('click', () => sidebarOverlay.removeClass('show'));
 // =========
 
 destinatiiInterne.on('click', function () {
-	// hiddenLinks.toggleClass('show-links');
-	// hiddenLinks.show();
-	// hiddenLinks.toggle('linear', complete).css('background', 'blue');
 	hiddenLinks.slideToggle(1000).addClass('show-links');
-	// hiddenLinks.slideToggle(1000).animate(
-	// 	{
-	// 		height:'250px',
-	// 		backgroundColor:"blue",
-	// 		fontSize: '48px'
-	// }, 1000);
 });
-function complete() {
-}
 carousel.attr('class', 'carousel');
 
 // video
@@ -51,41 +44,74 @@ videoBtn.on('click', () => {
 });
 
 // form
+let formDestinations = $("#destinations option:selected");
+const destinationValid = $("#destinationValid");
+// destination validation
+$('#destinations').change(function(e){
+	// console.log(e);
+	console.log($(this).val());
+	if ($(this).val() === "Select") {
+		destinationValid.removeClass('valid-feedback')
+		destinationValid.addClass('invalid')
+	}
+	 else {
+		destinationValid.addClass('valid-feedback')
+		destinationValid.removeClass('invalid')
+		formBudget.removeAttr("disabled");
+	}
+});
+
 form.on('submit', (e) => {
 	e.preventDefault();
-	let formDestinations = $("#destinations");
-	let formBudget = $("#budget");
 	let firstName = $("#firstName");
 	let lastName = $("#lastName");
 	let formEmail = $("#email");
 	let formMessage = $("#textarea");
 	const clientInfo = $("#clientInfo");
-	console.log(formBudget.val());
-
+	const emailPattern = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$";
 	const showInfo =()=>{
-if (firstName.val().length <3 || lastName.val().length<=5){
+		// destination validation
+		if (formDestinations.text() === "Select"){
+			destinationValid.removeClass('valid-feedback')
+			destinationValid.addClass('invalid')
+		} else {
+			formBudget.removeAttr("disabled");
+		}
+
+		// name validation
+	if (firstName.val().length <3 || lastName.val().length<=5){
 	return alert('First and last name are a must')
 }
 		clientInfo.removeAttr("id", "clientInfo")
 		clientInfo.html(`
-<div class="inner-client">
-<h1>${firstName.val()} ${lastName.val()}</h1>
-		<p> Wants to go to ${formDestinations.val()} and has
-		 a budget of 
-		 <span class=${formBudget.val() === "100$" || formBudget.val() === "500$" ? "sarac" : " "}>
-${formBudget.val() === "100$" || formBudget.val() === "500$" ? "De Sarac !" : formBudget.val() }</span> </p>
-		 <p>He left us this message : <span>${formMessage.val()}</span></p>
-		 <p>We may contact him at ${formEmail.val()}</p>
-</div>
+				<div class="inner-client">
+					<h1>${firstName.val()} ${lastName.val()}</h1>
+					<p> Wants to go to ${formDestinations.val()} and has
+					 a budget of
+					 <span class=${formBudget.val() === "100$" || formBudget.val() === "500$" ? "sarac" : " "}>
+					${formBudget.val() === "100$" || formBudget.val() === "500$" ? "De Sarac !" : formBudget.val() }</span> </p>
+		 			<p>He left us this message : <span>${formMessage.val()}</span></p>
+					 <p>We may contact him at <span class="email-validate">${formEmail.val()}</span></p>
+				</div>
 		`)
 		clientInfo.addClass('clientInfo')
 
 	}
 	showInfo();
-	const dataKey = $('.bg-red').data('key1', 1234);
-	// console.log(dataKey);
+	const checkEmail=()=>{
+		if (formEmail.val().indexOf('@')===-1){
+			alert('no @')
+		}
+		// if (formEmail.val() !== emailPattern){
+		// 	alert('no')
+		// }
+
+	}
+	checkEmail()
 	form.trigger('reset')
-	// form.reset();
+	destinationValid.addClass('valid-feedback')
+	destinationValid.removeClass('invalid')
+
 });
 
 

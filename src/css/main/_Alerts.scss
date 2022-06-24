@@ -9,7 +9,7 @@
   width: 100%;
   margin: 0 auto;
   color: $light-color;
-  background: rgba(20, 22, 24, 0.12);
+  background: rgba(20, 22, 24, 0.72);
   @media (max-width: $sm) {
     //height: 800px;
   }
@@ -91,4 +91,23 @@
     font-weight: 900;
     color: $danger;
   }
+}
+.invalid-feedback{
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #dc3545;
+}
+.invalid{
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: $danger;
+}
+.email-validate{
+  font-size: 22px;
+  font-style: italic;
+  font-weight: bolder;
+  text-decoration: underline;
 }
