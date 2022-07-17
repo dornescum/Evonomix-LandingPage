@@ -5,7 +5,8 @@ export const slides =[
 		"background": {
 			"backgroundImage": "../../assets/img1.webp",
 			"backgroundColor": "#fff"
-		}
+		},
+		id:1
 	},
 	{
 		title: "Oferta saptamanii 2",
@@ -13,7 +14,8 @@ export const slides =[
 		"background": {
 			"backgroundImage": "../../assets/img2.webp",
 			"backgroundColor": "#fff"
-		}
+		},
+		id:2
 	},
 	{
 		title: "Oferta saptamanii 3",
@@ -21,7 +23,9 @@ export const slides =[
 		"background": {
 			"backgroundImage": "../../assets/img3.webp",
 			"backgroundColor": "#fff"
-		}
+		},
+		id:3
+
 	},
 	{
 		title: "",
@@ -29,6 +33,8 @@ export const slides =[
 		"background": {
 			"backgroundImage": "",
 			"backgroundColor": "#420f0f"
-		}
+		},
+		id:4
+
 	}
 ];
