@@ -48,7 +48,7 @@ let formDestinations = $("#destinations option:selected");
 const destinationValid = $("#destinationValid");
 // destination validation
 $('#destinations').change(function(e){
-	// console.log(e);
+
 	console.log($(this).val());
 	if ($(this).val() === "Select") {
 		destinationValid.removeClass('valid-feedback')
